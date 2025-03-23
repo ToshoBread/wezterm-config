@@ -22,8 +22,10 @@ config = {
 	-- Terminal Appearance
 	--color_scheme = "Tokyo Night",
 	color_scheme = "Deafened (terminal.sexy)",
-	font = wezterm.font("JetBrainsMonoNL NF", { weight = "Regular", italic = false }),
+	-- font = wezterm.font("JetBrainsMonoNL NF", { weight = "Regular", italic = false }),
 	-- font = wezterm.font("Victor Mono"),
+	-- font = wezterm.font("ZedMono NFM Extd"),
+	font = wezterm.font_with_fallback({ "ZedMono NFM Extd", "FiraCode Nerd Font Mono" }),
 	window_background_opacity = 0.85,
 	font_size = 12,
 	line_height = 1,
