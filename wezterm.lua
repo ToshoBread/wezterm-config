@@ -9,7 +9,8 @@ local config = wezterm.config_builder()
 
 config = {
 	--Default Shell
-	default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" },
+	-- default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }, -- Windows
+	default_prog = { "zsh" },
 
 	-- Custom keybinds
 	keys = { table.unpack(keybinds) },
@@ -17,17 +18,13 @@ config = {
 
 	-- Terminal Behavior
 	term = "xterm-256color",
-	swallow_mouse_click_on_pane_focus = true,
+	swallow_mouse_click_on_pane_focus = false,
 
 	-- Terminal Appearance
-	--color_scheme = "Tokyo Night",
 	color_scheme = "Deafened (terminal.sexy)",
-	-- font = wezterm.font("JetBrainsMonoNL NF", { weight = "Regular", italic = false }),
-	-- font = wezterm.font("Victor Mono"),
-	-- font = wezterm.font("ZedMono NFM Extd"),
-	font = wezterm.font_with_fallback({ "ZedMono NFM Extd", "FiraCode Nerd Font Mono" }),
+	font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Regular", italic = false }),
 	window_background_opacity = 0.85,
-	font_size = 12,
+	font_size = 18,
 	line_height = 1,
 	cell_width = 1,
 
@@ -52,6 +49,7 @@ config = {
 	},
 
 	-- Miscellaneous Settings
+	enable_wayland = false,
 	max_fps = 120,
 	prefer_egl = true,
 	enable_csi_u_key_encoding = true,
