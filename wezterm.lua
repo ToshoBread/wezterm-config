@@ -22,9 +22,10 @@ config = {
 
 	-- Terminal Appearance
 	color_scheme = "Deafened (terminal.sexy)",
-	font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Regular", italic = false }),
+	-- font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Regular", italic = false }),
+	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", italic = false }),
 	window_background_opacity = 0.85,
-	font_size = 18,
+	font_size = 16,
 	line_height = 1,
 	cell_width = 1,
 
