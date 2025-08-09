@@ -9,7 +9,6 @@ local config = wezterm.config_builder()
 
 config = {
 	--Default Shell
-	-- default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }, -- Windows
 	default_prog = { "zsh" },
 
 	-- Custom keybinds
@@ -22,9 +21,8 @@ config = {
 
 	-- Terminal Appearance
 	color_scheme = "Deafened (terminal.sexy)",
-	-- font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Regular", italic = false }),
 	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", italic = false }),
-	window_background_opacity = 0.85,
+	window_background_opacity = 0.70,
 	font_size = 16,
 	line_height = 1,
 	cell_width = 1,
@@ -40,7 +38,7 @@ config = {
 	},
 
 	-- Window Appearance
-	window_decorations = "RESIZE", -- Removes the title bar but allows for window resizing
+	window_decorations = "RESIZE",
 	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
 		left = 0,
