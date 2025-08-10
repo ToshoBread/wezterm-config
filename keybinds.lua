@@ -1,7 +1,7 @@
+---@diagnostic disable: unused-local
+
 local wezterm = require("wezterm")
 local act = wezterm.action
-
-local backgroundOpacity = 0.70
 
 local keybinds = {
 	-- General keybinds
@@ -15,12 +15,10 @@ local keybinds = {
 	{
 		key = "Z",
 		mods = "CTRL|SHIFT",
-		---@diagnostic disable-next-line: unused-local
 		action = wezterm.action_callback(function(window, pane)
-			backgroundOpacity = (backgroundOpacity == 0.70) and 1 or 0.70
-			window:set_config_overrides({
-				window_background_opacity = backgroundOpacity,
-			})
+			local overrides = window:get_config_overrides() or {}
+			overrides.window_background_opacity = not overrides.window_background_opacity and 1 or nil
+			window:set_config_overrides(overrides)
 		end),
 	},
 
