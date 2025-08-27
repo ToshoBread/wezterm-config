@@ -23,12 +23,6 @@ local keybinds = {
 	},
 
 	{ key = "Enter", mods = "ALT", action = act.SendKey({ key = "Escape" }) },
-
-	-- Swap brackets and braces
-	{ key = "[", action = act.SendKey({ key = "{" }) },
-	{ key = "]", action = act.SendKey({ key = "}" }) },
-	{ key = "{", mods = "SHIFT", action = act.SendKey({ key = "[" }) },
-	{ key = "}", mods = "SHIFT", action = act.SendKey({ key = "]" }) },
 }
 
 return keybinds
